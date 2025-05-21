@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,32 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Noto Sans SC', system-ui, sans-serif;
+  }
+}
+
+.fortune-card {
+  background-image: linear-gradient(135deg, rgba(249, 255, 182, 0.8) 0%, rgba(226, 255, 172, 0.8) 100%);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+.fortune-card.zodiac {
+  background-image: linear-gradient(135deg, rgba(229, 222, 255, 0.8) 0%, rgba(211, 228, 253, 0.8) 100%);
+}
+
+.fortune-card.animal {
+  background-image: linear-gradient(135deg, rgba(255, 222, 226, 0.8) 0%, rgba(253, 225, 211, 0.8) 100%);
+}
+
+.fortune-card-border {
+  border: 2px dashed;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #9b87f5, #ea384c);
 }
